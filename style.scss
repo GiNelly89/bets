@@ -1,0 +1,139 @@
+$pirmary-color: #435585;
+$secondary-color: #872341;
+$font-color: #f5e8c7;
+$vintage-color: #a78295;
+$additional: #662549;
+$green: #008170;
+$light-green: #5c8374;
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: $pirmary-color;
+  color: $font-color;
+  padding: 1.1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .header-left {
+    p {
+      font-size: 14px;
+    }
+  }
+
+  nav {
+    ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      padding: 0;
+
+      li {
+        a {
+          text-decoration: none;
+          color: $font-color;
+          font-weight: bold;
+
+          &:hover {
+            color: $vintage-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+.login-button {
+  background-color: $secondary-color;
+  color: $font-color;
+  padding: 0.5em 1.2em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: darken($secondary-color, 10%);
+  }
+}
+
+.main-section {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 70vh;
+
+  p {
+    // font-size: 16px;
+    animation: textAnime 2s infinite;
+  }
+
+  .register-btn {
+    background-color: $pirmary-color;
+    color: $font-color;
+    padding: 1.3em;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.4s ease-in-out;
+
+    &:hover {
+      background-color: $additional;
+      transform: scale(1.1);
+    }
+  }
+}
+
+@keyframes textAnime {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.2);
+  }
+}
+
+.secondary-section {
+  background-color: $light-green;
+  color: $font-color;
+  padding: 1.5em;
+  text-align: center;
+  margin-bottom: 60px;
+
+  .style-list {
+    h2 {
+      font-size: 1.8rem;
+      margin-bottom: 50px;
+    }
+    ul {
+      list-style: none;
+      display: flex;
+      justify-content: space-around;
+      padding: 0;
+
+      li {
+        background-color: $green;
+        padding: 0.7em;
+        border-radius: 5px;
+      }
+    }
+  }
+}
+
+footer {
+  background-color: $pirmary-color;
+  color: $font-color;
+  text-align: center;
+  padding: 0.5em;
+  position: fixed;
+  // damit er wieder sichtbar wird => bottom
+  bottom: 0;
+  width: 100%;
+// left: 0;
+// right: 0;
+  border-top: 7px solid #E19898;
+}
